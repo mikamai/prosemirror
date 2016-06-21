@@ -11,6 +11,7 @@ Disable the `setBlockType` command for non-textblock blocks.
 
 Make `splitBlock` handle content restrictions better.
 
+>>>>>>> Add 0.8.2 to CHANGELOG
 ## 0.8.2 (2016-06-21)
 
 ### Bug fixes
