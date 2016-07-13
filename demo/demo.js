@@ -8,7 +8,14 @@ var pm = window.pm = new ProseMirror({
   plugins: [exampleSetup.config({tooltipMenu: true})]
 })
 
-document.querySelector("#mark").addEventListener("mousedown", function(e) {
-  pm.markRange(pm.selection.from, pm.selection.to, {className: "marked"})
+function makeElt() {
+  let elt = document.createElement("span")
+  elt.style.background = "cyan"
+  elt.textContent = "<!>"
+  return elt
+}
+
+document.querySelector("#mark").addEventListener("mousedown", e => {
+  pm.markRange(pm.selection.from, pm.selection.to, {className: "marked", elementBefore: makeElt()})
   e.preventDefault()
 })
