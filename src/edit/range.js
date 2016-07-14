@@ -147,7 +147,7 @@ class RangeTracker {
           else
             this.current.splice(this.current.indexOf(className), 1)
         }
-        if (element && next.type == "open") this.element = element
+        if (element && next.type == "open" && next.at == pos) this.element = element
       }
       this.pos++
     }
